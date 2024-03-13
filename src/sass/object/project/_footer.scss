@@ -1,0 +1,207 @@
+@use 'global' as *;
+
+.footer {
+  background-color: #fff;
+  padding-bottom: myrem(50);
+
+  @include mq('md') {
+    padding-top: myrem(100);
+    padding-bottom: myrem(100);
+  }
+}
+
+.footer .l-inner {
+  padding-left: 0;
+  padding-right: 0;
+
+  @include mq('md') {
+    padding-left: initial;
+    padding-right: initial;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq('md') {
+    flex-direction: row;
+    align-items: initial;
+  }
+}
+
+.footer__map {
+  aspect-ratio: 720 / 403;
+  width: 100%;
+
+  @include mq('md') {
+    width: myrem(720);
+  }
+}
+
+.footer__map iframe {
+  aspect-ratio: 720 / 403;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer__info {
+  margin-top: myrem(30);
+  padding-left: myrem(15);
+  padding-right: myrem(15);
+  text-align: center;
+
+  @include mq('md') {
+    margin-top: initial;
+    margin-left: myrem(49);
+    padding-left: initial;
+    padding-right: initial;
+    text-align: initial;
+  }
+}
+
+.footer__title {
+  aspect-ratio: 412 / 70;
+  max-width: myrem(354);
+  width: 100%;
+
+  @include mq('md') {
+    width: myrem(412);
+  }
+}
+
+.footer__title img {
+  aspect-ratio: 412 / 70;
+  object-fit: contain;
+  width: 100%;
+}
+
+.footer__address {
+  margin-top: myrem(20);
+  font-family: $font-sub1;
+  font-size: myrem(14);
+  font-weight: $Regular;
+
+  @include mq('md') {
+    margin-top: myrem(25);
+    font-size: myrem(16);
+  }
+}
+
+.footer__contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq('md') {
+    display: block;
+  }
+}
+
+.footer__contact {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__contact-text {
+  font-family: $font-sub3;
+  font-weight: $Regular;
+  text-transform: uppercase;
+  font-size: myrem(26);
+  letter-spacing: 0.05em;
+}
+
+.footer__contact-number {
+  font-family: $font-sub3;
+  font-weight: $Bold;
+  font-size: myrem(40);
+  letter-spacing: 0.05em;
+  color: #0079C3;
+  margin-left: myrem(15);
+}
+
+
+.footer__copyright {
+  font-family: $font-sub1;
+  font-size: myrem(12);
+  font-weight: $Regular;
+  margin-top: myrem(23);
+  text-align: center;
+  padding-left: myrem(15);
+  padding-right: myrem(15);
+
+  @include mq('md') {
+    font-size: myrem(16);
+    margin-top: myrem(72);
+    padding-left: initial;
+    padding-right: initial;
+  }
+}
+
+.footer__btn {
+  display: flex;
+  margin-top: myrem(34);
+}
+
+.footer__document-btn {
+
+  width: 50%;
+  display: inline-block;
+  padding: myrem(13) myrem(14) myrem(13) myrem(15);
+  background: linear-gradient(90deg,#5FB8EF 0%,#615EF4 50%,#0079C3 100%);
+}
+
+.footer__document-btn span {
+  color: #fff;
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  font-size: myrem(16);
+  display: inline-block;
+  padding-left: myrem(59);
+  position: relative;
+}
+
+.footer__document-btn span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: myrem(25);
+  height: myrem(22);
+  background: url('../images/book-icon.svg') no-repeat;
+  background-size: contain;
+}
+
+.footer__open-btn {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  padding: myrem(13) myrem(14) myrem(13) myrem(15);
+  background: linear-gradient(90deg,#FF9C64 0%,#FF7F56 100%);
+}
+
+.footer__open-btn span {
+  color: #fff;
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  font-size: myrem(16);
+  display: inline-block;
+  padding-left: myrem(19);
+  position: relative;
+  white-space: nowrap;
+
+}
+
+.footer__open-btn span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: myrem(15);
+  height: myrem(22);
+  background: url('../images/door-icon.svg') no-repeat;
+  background-size: contain;
+}

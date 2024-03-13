@@ -1,0 +1,224 @@
+@use 'global' as *;
+
+.therapist {
+  padding-top: myrem(49);
+
+  @include mq('md') {
+    padding-top: myrem(21);
+  }
+}
+
+.therapist__bg {
+  background: url(../images/therapist-bg.jpg) no-repeat center center / cover;
+  width: 100%;
+  padding-bottom: myrem(33);
+
+  @include mq('md') {
+    padding-top: myrem(129);
+    padding-bottom: myrem(100);  
+  }
+}
+
+.therapist__title-bg {
+  width: 100%;
+  background: linear-gradient(45deg,#1B98DD 0%,#1DB47D 100%);
+  text-align: center;
+
+  @include mq('md') {
+    text-align: initial;
+  }
+}
+
+
+.therapist__title {
+  font-size: myrem(20);
+  font-weight: $Medium;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  padding-top: myrem(9);
+  padding-bottom: myrem(9);
+  display: inline-block;
+  text-align: left;
+
+  @include mq('md') {
+    display: block;
+    font-size: myrem(40);
+    padding-left: myrem(220);
+    padding-top: initial;
+    padding-bottom: initial;
+    text-align: initial;
+  }
+}
+
+.therapist__title::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(90deg,transparent 0%,#fff 15% ,#fff 85%,transparent 100%);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180%;
+  height: myrem(70);
+  z-index: -1;
+
+  @include mq('md') {
+    width: myrem(860);
+    left: myrem(74);
+    transform: initial;
+    height: myrem(70);
+  }
+}
+
+.therapist__title span {
+  font-size: myrem(70);
+  font-weight: $Medium;
+  display: inline-block;
+  line-height: 0;
+  
+
+  @include mq('md') {
+    font-size: myrem(80);
+    line-height: 0.8;
+  }
+
+}
+
+.therapist__wrapper {
+  margin-top: myrem(17);
+  display: flex;
+  flex-direction: column;
+
+  @include mq('md') {
+    flex-direction: row;
+    margin-top: myrem(97);
+  }
+}
+
+.therapist__card {
+  max-width: myrem(580);
+  text-align: center;
+
+  @include mq('md') {
+    text-align: initial;
+  }
+}
+
+.therapist__card + .therapist__card {
+  margin-top: myrem(40);
+
+  @include mq('md') {
+    margin-top: initial;
+    margin-left: myrem(40);
+  }
+}
+
+.therapist__card-title {
+  font-size: myrem(40);
+  font-weight: $Medium;
+  color: #48AEDE;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+
+  @include mq('md') {
+    font-size: myrem(50);
+  }
+}
+
+.therapist__card-title--green {
+  color: #4AC297;
+}
+
+.therapist__card-title::before {
+  position: absolute;
+  content: attr(data-en);
+  font-family: $font-heading;
+  font-size: myrem(30);
+  color: #BDBDBD;
+  bottom: myrem(-23);
+  right: myrem(20);
+  z-index: -1;
+  transform: rotate(-5deg);
+  white-space: nowrap;
+
+  @include mq('md') {
+    font-size: myrem(40);
+    right: myrem(-126)  ;
+    bottom: myrem(-18);
+
+  }
+}
+
+.therapist__card-title--green::before {
+  right: 0;
+
+  @include mq('md') {
+    right: myrem(-190);
+
+  }
+}
+
+.therapist__card-infobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: myrem(37);
+
+  @include mq('md') {
+    flex-direction: row;
+    margin-top: myrem(18);
+  }
+}
+
+.therapist__card-license-info {
+  display: inline-block;
+  background-color: #48AEDE;
+  font-size: myrem(14);
+  font-weight: $Medium;
+  font-family: $font-sub1;
+  color: #fff;
+  padding: myrem(7) myrem(17) myrem(6);
+
+  @include mq('md') {
+    font-size: myrem(18);
+  }
+}
+
+.therapist__card-license-info--green {
+  background-color: #4AC297;
+}
+
+.therapist__card-license {
+  font-family: $font-sub1;
+    font-size: myrem(18);
+    margin-top: myrem(10);
+
+
+    @include mq('md') {
+      margin-left: myrem(15);
+      margin-top: initial;
+    }
+
+}
+
+.therapist__card-text {
+  margin-top: myrem(17);
+  font-size: myrem(16);
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  line-height: calc(32 / 16);
+  text-align: left;
+
+  @include mq('md') {
+    margin-top: myrem(32);
+  }
+
+}
+
+.therapist__card-btn {
+  margin-top: myrem(25);
+  text-align: center;
+}
+
+

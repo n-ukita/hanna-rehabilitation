@@ -1,0 +1,219 @@
+@use 'global' as *;
+
+.card1 {
+  background-color: #fff;
+  padding: myrem(20) myrem(10) myrem(30);
+  border-radius: myrem(20);
+  box-shadow: 0 myrem(8) myrem(8) rgba(0, 0, 0, 0.15);
+
+  @include mq('md') {
+    padding: myrem(50) myrem(50) myrem(55);
+  }
+}
+
+.card1__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq('md') {
+    flex-direction: row;
+    align-items: initial;
+  }
+}
+
+.card1__wrapper--p5 {
+  
+
+  @include mq('md') {
+    flex-direction: row-reverse;
+  }
+}
+
+.card1__img {
+  border-radius: myrem(10);
+  aspect-ratio: 314 / 207;
+  width: myrem(314);
+  flex-shrink: 0;
+  overflow: hidden;
+  order: 4;
+  margin-top: myrem(15);
+
+  @include mq('md') {
+    aspect-ratio: 530 / 350;
+    width: myrem(530);  
+    margin-top: initial;
+    order: initial;
+  }
+}
+
+.card1__img img {
+  aspect-ratio: 314 / 207;
+  object-fit: cover;
+  width: 100%;
+
+  @include mq('md') {
+    aspect-ratio: 530 / 350;
+  }
+}
+
+.card1__body {
+  display: contents;
+
+  @include mq('md') {
+    display: block;
+    margin-left: myrem(40);
+  }
+}
+
+.card1__wrapper--p5 .card1__body {
+  display: contents;
+
+  @include mq('md') {
+    display: block;
+    margin-left: initial;
+    margin-right: myrem(40);
+  }
+
+}
+
+.card1__lead {
+  font-family: $font-heading;
+  font-size: myrem(45);
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  order: 1;
+
+  @include mq('md') {
+    font-size: myrem(60);
+    order: initial;
+  }
+}
+
+.card1__lead::before {
+  position: absolute;
+  content: "";
+  background: url(../images/card-lead_effect1.png) no-repeat center center / contain;
+  bottom: myrem(-5);
+  right: myrem(-40);
+  width: myrem(131);
+  height: myrem(50);
+  z-index: -1;
+
+  @include mq('md') {
+    width: myrem(175);
+    height: myrem(65);  
+    right: myrem(-60);
+  }
+}
+
+.card1__title {
+  margin-top: myrem(10);
+  font-size: myrem(24);
+  font-weight: $Medium;
+  order: 2;
+  white-space: nowrap;
+
+  @include mq('md') {
+    font-size: myrem(30);
+    order: initial;
+  }
+}
+
+.card1__text {
+  margin-top: myrem(22);
+  font-family: $font-sub1;
+  font-size: myrem(14);
+  line-height: calc(24 / 14);
+  font-weight: $Medium;
+  position: relative;
+  order: 3;
+
+  @include mq('md') {
+    font-size: myrem(16);
+    line-height: initial;
+
+  }
+}
+
+.card1__btn1-btn {
+  margin-top: myrem(23);
+  order: 5;
+
+  @include mq('md') {
+    margin-top: myrem(43);
+  }
+}
+
+
+
+.card1__middle-wrapper {
+
+}
+
+.card1__title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq('md') {
+    flex-direction: row;
+    align-items: initial;
+  }
+}
+
+.card1__middle-lead {
+  font-family: $font-heading;
+  font-size: myrem(45);
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  order: 1;
+
+  @include mq('md') {
+    font-size: myrem(60);
+    margin-right: myrem(56);
+    order: initial;
+  }
+}
+
+.card1__middle-lead::before {
+  position: absolute;
+  content: "";
+  background: url(../images/card-lead_effect2.png) no-repeat center center / contain;
+  bottom: myrem(-5);
+  right: myrem(-32);
+  width: myrem(131);
+  height: myrem(50);
+  z-index: -1;
+
+  @include mq('md') {
+    width: myrem(175);
+    height: myrem(65);  
+    top: myrem(30);
+    right: myrem(-35);
+  }
+}
+
+
+.card1__middle-img {
+  margin-top: myrem(28);
+  aspect-ratio: 480 / 317;
+  border-radius: myrem(20);
+  overflow: hidden;
+}
+
+.card1__middle-img img {
+  aspect-ratio: 480 / 317;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card1__lead--p4::before {
+  background: url(../images/card-lead_effect3.png) no-repeat center center / contain;
+}
+
+.card1__lead--p5::before {
+  background: url(../images/card-lead_effect4.png) no-repeat center center / contain;
+}

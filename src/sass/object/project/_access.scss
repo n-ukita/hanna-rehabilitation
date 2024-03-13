@@ -1,0 +1,290 @@
+@use 'global' as *;
+
+.access {
+  background-color: #D8F4F5;
+  padding-bottom: myrem(50);
+}
+
+.access__top-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include mq('md') {
+    flex-direction: row;
+  }
+}
+
+.access__info {
+}
+
+.access__title-box {
+  position: relative;
+  text-align: center;
+
+  @include mq('md') {
+    text-align: initial;
+    margin-top: myrem(28);
+  }
+}
+
+.access__title {
+  font-family: $font-heading;
+  font-size: myrem(100);
+  font-weight: $Regular;
+  color: #231815;
+  transform: rotate(-5deg);
+
+  @include mq('md') {
+    font-size: myrem(200);
+  }
+}
+
+.access__title-box::before {
+  content: '';
+  position: absolute;
+  top: myrem(-40);
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(../images/access-bus.png) no-repeat center center / contain;
+  aspect-ratio: 424 / 203;
+  width: myrem(200);
+
+  @include mq('md') {
+    width: myrem(424);
+    top: myrem(-80);
+    left: myrem(50);  
+    transform: initial;
+  } 
+}
+
+.access__ways {
+}
+
+.access__ways-box {
+  display: flex;
+}
+
+.access__ways-icon {
+  aspect-ratio: 110 / 110;
+  width: myrem(100);
+
+  @include mq('md') {
+    width: myrem(110);
+  }
+}
+
+.access__ways-icon img {
+  aspect-ratio: 110 / 110;
+  object-fit: contain;
+  width: 100%;
+
+}
+
+.access__ways-text-box {
+  margin-left: myrem(15);
+  max-width: myrem(434);
+  width: 100%;
+
+  @include mq('md') {
+    margin-left: myrem(20);
+  }
+}
+
+.access__ways-text {
+  font-family: $font-sub1;
+  font-weight: $Regular;
+  font-size: myrem(14);
+  text-indent: -1em;
+  padding-left: 1em;
+
+  @include mq('md') {
+    font-size: myrem(20);
+  }
+
+}
+
+.access__way {
+  margin-top: myrem(20);
+  aspect-ratio: 540 / 300;
+  width: 100%;
+
+  @include mq('md') {
+    margin-top: myrem(40);
+    width: myrem(540);
+  }
+}
+
+.access__way img {
+  aspect-ratio: 540 / 300;
+  object-fit: cover;
+  width: 100%;
+}
+
+.access__map {
+  margin-top: myrem(23);
+  background-color: #fff;
+  padding: myrem(18) myrem(18) myrem(27);
+
+  @include mq('md') {
+    margin-top: myrem(50);
+    margin-left: myrem(80);
+    padding: myrem(30) myrem(30) myrem(45);
+  }
+}
+
+.access__map img {
+  aspect-ratio: 520 / 625;
+  object-fit: cover;
+  width: 100%;
+}
+
+.access__bottom-wrapper {
+  margin-top: myrem(43);
+  background-color: #fff;
+  border: 3px solid #1B98DD;
+  border-radius: myrem(10);
+  width: 100%;
+  position: relative;
+  padding: myrem(40) myrem(20) myrem(33);
+  display: flex;
+  flex-direction: column;
+  
+
+  @include mq('md') {
+    margin-top: myrem(89);
+    flex-direction: row;
+    justify-content: center;
+    padding: myrem(47) 0 myrem(33);
+  }
+}
+
+.access__bottom-wrapper-head {
+  font-family: $font-sub1;
+  font-size: myrem(20);
+  font-weight: $Medium;
+  color: #fff;
+  background-color: #1B98DD;
+  border-radius: myrem(25);
+  padding: myrem(5) 0;
+  position: absolute;
+  top: myrem(-22);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: myrem(260);
+  width: 100%;
+  text-align: center;
+
+  @include mq('md') {
+    max-width: myrem(360);
+    font-size: myrem(24);
+    padding: myrem(10) 0;
+  }
+}
+
+.access__course {
+  max-width: myrem(314);
+  width: 100%;
+  flex-grow: 1;
+
+  @include mq('md') {
+    max-width: myrem(510);
+  }
+}
+
+.access__course + .access__course {
+  margin-top: myrem(29);
+
+  @include mq('md') {
+    margin-top: initial;
+    margin-left: myrem(51);
+  }
+}
+
+.access__course-head {
+  max-width: myrem(510);
+  width: 100%;
+  background-color: #737FE7;
+  color: #fff;
+  text-align: center;
+  font-family: $font-sub1;
+  font-weight: $Black;
+  font-size: myrem(12);
+  border-radius: myrem(20);
+
+  @include mq('md') {
+    font-size: myrem(20);
+  }
+}
+
+.access__course-head--green {
+  background-color: #65CA15;
+}
+
+.access__course-wrapper {
+  margin-top: myrem(12);
+  display: flex;
+  justify-content: center;
+
+  @include mq('md') {
+    margin-top: myrem(20);
+  }
+}
+
+.access__course-station {
+  background-color: #737FE7;
+  color: #fff;
+  font-family: $font-sub1;
+  font-weight: $Black;
+  font-size: myrem(10);
+  padding: myrem(5) myrem(10);
+  position: relative;
+  margin-right: myrem(31);
+  white-space: nowrap;
+
+  @include mq('md') {
+    font-size: myrem(16);
+    padding: myrem(8) myrem(20);
+    margin-right: myrem(60);
+  }
+}
+
+.access__course-station::after {
+  content: "";
+  position: absolute;
+  background: url(../images/access-arrows.png) no-repeat center center / contain;
+  right: myrem(-28);
+  top: 50%;
+  transform: translateY(-50%);
+  width: myrem(25);
+  height: myrem(13);
+
+  @include mq('md') {
+    right: myrem(-51);
+    width: myrem(41);
+    height: myrem(21);  
+  }
+}
+
+.access__course-station--green {
+  background-color: #65CA15;
+}
+
+.access__course-station--blue {
+  background-color: #73B6E7;
+}
+
+.access__course-school {
+  background-color: #0750A4;
+  color: #fff;
+  font-family: $font-sub1;
+  font-weight: $Black;
+  font-size: myrem(10);
+  padding: myrem(5) myrem(27);
+  white-space: nowrap;
+
+  @include mq('md') {
+    font-size: myrem(16);
+    padding: myrem(8) myrem(20);
+  }
+}
+

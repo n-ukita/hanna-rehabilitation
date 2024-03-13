@@ -1,0 +1,7 @@
+@use 'global' as *;
+
+.event {
+  background: url("../images/event-bg.jpg") no-repeat center center / cover;
+  height: myrem(500);
+  width: 100%;
+}

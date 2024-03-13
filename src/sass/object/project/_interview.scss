@@ -1,0 +1,671 @@
+@use 'global' as *;
+
+.interview {
+  background-color: rgba($color: #F9F7DE, $alpha: 0.4);
+  padding-top: myrem(30);
+  overflow: hidden;
+
+  @include mq('md') {
+    padding-top: myrem(80);
+  }
+}
+
+.interview__subtitle {
+  max-width: myrem(683);
+  width: 100%;
+  margin-inline: auto;
+  padding-right: myrem(15);
+  padding-left: myrem(15);
+
+  @include mq('md') {
+    padding-right: initial;
+    padding-left: initial;
+  }
+}
+
+.interview__subtitle img {
+  aspect-ratio: 683 / 219;
+  object-fit: contain;
+  width: 100%;
+}
+
+.interview__title-box {
+  text-align: center;
+  position: relative;
+}
+
+.interview__title-box::before {
+
+  @include mq('md') {
+    content: "";
+  position: absolute;
+  background: url(../images/Polygon1.png) no-repeat center center / contain;
+  top: myrem(-200);
+  left: myrem(90);
+  aspect-ratio: 98 / 98;
+  width: myrem(98);
+  }
+}
+
+.interview__title-box::after {
+
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    background: url(../images/Heart1.png) no-repeat center center / contain;
+    top: 0;
+    right: 0;
+    aspect-ratio: 130 / 97;
+    width: myrem(130);
+  }
+}
+
+.interview__title {
+  font-size: myrem(26);
+  font-weight: $Medium;
+  color: #fff;
+  background-color: #73B6E7;
+  border-radius: myrem(12);
+  display: inline-block;
+  padding: myrem(5)myrem(18);
+  position: relative;
+  z-index: 3;
+
+  @include mq('md') {
+    font-size: myrem(50);
+    padding: myrem(10)myrem(40);
+  }
+}
+
+.interview__title::before {
+  content: "";
+  position: absolute;
+  background: url(../images/interview-effect.png) no-repeat center center / contain;
+  top: myrem(-25);
+  left: 50%;
+  transform: translateX(-50%);
+  width: myrem(108);
+  aspect-ratio: 108 / 68;
+  z-index: -1;
+
+  @include mq('md') {
+    width: myrem(210);
+    aspect-ratio: 210 / 130;  
+    top: myrem(-50);
+  }
+}
+
+.interview__title::after {
+  content: "Interview";
+  position: absolute;
+  font-family: $font-heading;
+  font-size: myrem(120);
+  color: rgba($color: #73B6E7, $alpha: 0.15);
+  bottom: myrem(-100);
+  left: 50%;
+  transform: translateX(-50%) rotate(-4deg);
+
+  @include mq('md') {
+    font-size: myrem(300);
+    bottom: myrem(-240);
+  }
+
+}
+
+.interview__wrapper {
+  margin-top: myrem(133);
+}
+
+.interview__card-inner {
+  position: relative;
+}
+
+.interview__card-inner::before {
+  content: "";
+  position: absolute;
+  background: url(../images/interview-card-effect-sp1.png) no-repeat center center / contain;
+  top: myrem(20);
+  left: myrem(-17);
+  width: myrem(64);
+  height: myrem(583);
+  z-index: -1;
+
+  @include mq('md') {
+    background: url(../images/interview-card_effect1.png) no-repeat center center / contain;
+    top: myrem(135);
+    left: myrem(-33);
+    width: myrem(79);
+    height: myrem(86);
+  }
+  
+}
+
+.interview__card-inner::after {
+  content: "";
+  position: absolute;
+  background: url(../images/interview-card-effect-sp2.png) no-repeat center center / contain;
+  top: myrem(120);
+  right: myrem(-15);
+  width: myrem(64);
+  height: myrem(484);
+  z-index: -1;
+
+
+  @include mq('md') {
+    background: url(../images/interview-card_effect2.png) no-repeat center center / contain;
+    top: 50%;
+    transform: translateY(-50%);
+    right: myrem(-25);
+    width: myrem(69);
+    height: myrem(69);
+  }
+}
+
+.interview__card {
+  padding: myrem(35) myrem(15) 0;
+  border:myrem(2) solid  #5FB8EF;
+  border-radius: myrem(20);
+  background-color: rgba($color: #FCFCF2, $alpha: 0.7);
+  position: relative;
+
+  @include mq('md') {
+    padding: myrem(85) myrem(50) 0;
+    border:myrem(5) solid  #5FB8EF;
+
+  }
+}
+
+.inner-bg {
+  position: relative;
+}
+
+.inner-bg::before {
+
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    background: url(../images/interview-card_effect3.png) no-repeat center center / contain;
+    bottom: myrem(-500);
+    left: myrem(-25);
+    width: myrem(130);
+    height: myrem(97);
+    z-index: -1;
+  }
+}
+
+.inner-bg::after {
+
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    background: url(../images/interview-card_effect4.png) no-repeat center center / contain;
+    bottom: myrem(-620);
+    width: myrem(99);
+    height: myrem(99);
+    z-index: -1;  
+    right: myrem(-1215);
+
+  }
+}
+
+.interview__card-head {
+  position: absolute;
+  top: myrem(-20);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: myrem(20);
+  font-family: $font-sub1;
+  color: #fff;
+  font-weight: $Medium;
+  padding: myrem(4) myrem(30) myrem(6);
+  background-color: #5FB8EF;
+  display: inline-block;
+  border-radius: myrem(10);
+  white-space: nowrap;
+
+  @include mq('md') {
+    font-size: myrem(30);
+    top: myrem(-32);
+    left: myrem(44);  
+    transform: initial;
+    padding: myrem(7) myrem(40) myrem(8);
+  }
+}
+
+.interview__card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq('md') {
+    flex-direction: row;
+    align-items: initial;
+    padding-left: myrem(60);
+    padding-bottom: myrem(140);
+  }
+}
+
+.interview__img-wrapper {
+  position: relative;
+  margin-top: myrem(51);
+
+  @include mq('md') {
+    margin-top: initial;
+  }
+}
+
+.interview__img-wrapper::before {
+  content: "";
+  position: absolute;
+  width: myrem(190);
+  height: myrem(190);
+  background-color: #F9F385;
+  top: myrem(20);
+  left: myrem(20);
+  border-radius: 50%;
+  z-index: 2;
+
+  @include mq('md') {
+    width: myrem(300);
+    height: myrem(300);
+    top: myrem(30);
+  left: myrem(30);
+  }
+}
+
+.interview__img-wrapper::after {
+  content: "";
+  position: absolute;
+  background: url(../images/photo-effect.png) no-repeat center center / contain;
+  top: myrem(-20);
+  left: myrem(-20);
+  width: myrem(223);
+  height: myrem(105);
+
+  @include mq('md') {
+    width: myrem(351);
+    height: myrem(166);  
+    left: myrem(-40);
+    top: myrem(-10);
+  }
+}
+
+.interview__card-img {
+  width: myrem(190);
+  height: myrem(190);
+  border-radius: 50%;
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+
+  @include mq('md') {
+    width: myrem(300);
+    height: myrem(300);
+  
+  } 
+}
+
+.interview__card-img img {
+  aspect-ratio: 300 / 300;
+  object-fit: cover;
+  width: 100%;
+}
+
+.interview__card-body {
+  margin-top: myrem(38);
+  margin-bottom: myrem(70);
+
+  @include mq('md') {
+    margin-top: initial;
+    margin-left: myrem(64);
+    margin-bottom: initial;
+  }
+}
+
+.interview__card-name {
+  text-align: center;
+  font-size: myrem(30);
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  color: #48AEDE;  
+
+  @include mq('md') {
+    text-align: initial;
+    font-size: myrem(50);
+  }
+}
+
+.interview__card-name span {
+  font-size: myrem(20);
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  color: #48AEDE; 
+
+  @include mq('md') {
+    font-size: myrem(30);
+  }
+}
+
+.interview__card-info {
+  margin-top: myrem(15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq('md') {
+    margin-top: initial;
+    flex-direction: row;
+  }
+}
+
+.interview__card-subject {
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  font-size: myrem(14);
+  color: #fff;
+  background-color: #48AEDE;
+  padding: myrem(5) myrem(23) myrem(4);
+
+  @include mq('md') {
+    font-size: myrem(18);
+    padding: myrem(7) myrem(16) myrem(6);
+  }
+}
+
+.interview__card-school {
+  margin-top: myrem(10);
+  font-family: $font-sub1;
+  font-weight: $Bold;
+  font-size: myrem(18);
+  
+
+  @include mq('md') {
+    margin-top: initial;
+    margin-left: myrem(15);
+  }
+}
+
+.interview__card-text {
+  margin-top: myrem(13);
+  font-family: $font-sub1;
+  font-weight: $Bold;
+  font-size: myrem(14);
+  line-height: calc(24 / 14);
+  position: relative;
+  z-index: 2;
+
+  @include mq('md') {
+    font-size: myrem(16);
+    line-height: calc(32 / 16);  
+    margin-top: myrem(32);
+    max-width: myrem(580);
+    width: 100%;
+  }
+}
+
+.interview__card-text::before {
+  content: "";
+  position: absolute;
+  background: url(../images/card-bg-effect1-sp.png) no-repeat center center / contain;
+  aspect-ratio: 314 / 200;
+  width: myrem(300);
+  top: myrem(30);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+
+  @include mq('md') {
+    aspect-ratio: 630 / 294;
+      background: url(../images/card-bg-effect1.png) no-repeat center center / contain;
+    width: myrem(630);  
+    top: myrem(-40);
+    left: 0;
+    transform: initial;
+  }
+}
+
+
+.interview__card-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: myrem(34);
+  display: flex;
+  max-width: myrem(149);
+  width: 100%;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq('md') {
+    margin-top: myrem(88);
+    bottom: 0;
+  }
+}
+
+.interview__card-prev {
+  width: myrem(40);
+  height: myrem(40);
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interview__card-prev::before {
+  content: "";
+  position: absolute;
+  width: myrem(12);
+  height: myrem(14);
+  background-color: #0079C3;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+
+.interview__card-number {
+  font-family: $font-sub1;
+  font-weight: $Regular;
+  font-size: myrem(16);
+  line-height: calc(28 / 16);
+}
+
+.interview__card-next {
+  width: myrem(40);
+  height: myrem(40);
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interview__card-next::before {
+  content: "";
+  position: absolute;
+  width: myrem(12);
+  height: myrem(14);
+  background-color: #0079C3;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+
+.interview__card2-inner {
+  margin-top: myrem(42);
+  position: relative;
+
+  @include mq('md') {
+    margin-top: myrem(80);
+  }
+}
+
+.interview__card2-inner::before {
+  content: "";
+  position: absolute;
+  background: url(../images/interview-card-effect-sp1.png) no-repeat center center / contain;
+  width: myrem(64);
+  height: myrem(583);
+  top: myrem(-100);
+  left: myrem(-15);
+  z-index: -1;
+
+  @include mq('md') {
+    background: url(../images/interview-card_effect2.png) no-repeat center center / contain;
+    width: myrem(69);
+    height: myrem(69);
+    top: 50%;
+    transform: translateY(-50%);
+    left: myrem(-10);
+  }
+  
+}
+
+.interview__card2-inner::after {
+  content: "";
+  position: absolute;
+  background: url(../images/interview-card-effect-sp4.png) no-repeat center center / contain;
+  width: myrem(64);
+  height: myrem(484);
+  top: myrem(-20);
+  right: myrem(-15);
+  z-index: -1;
+
+  @include mq('md') {
+    content: "";
+    position: absolute;
+    background: url(../images/interview-card_effect5.png) no-repeat center center / contain;
+    width: myrem(79);
+    height: myrem(86);
+    top: 50%;
+    transform: translateY(-50%);
+    right: myrem(-25);
+  }
+  
+}
+
+.interview__card--green {
+  border-color: #4AC297;
+  position: relative;
+}
+
+.interview__card--green::before {
+  position: absolute;
+  content: "";
+  background: url(../images/interview-text-effect.png) no-repeat center center / contain;
+  width: myrem(58);
+  height: myrem(46);
+  top: myrem(-40);
+  right: myrem(-10);
+  z-index: -1;
+
+}
+
+.interview__card-head--green {
+  background-color: #4AC297;
+}
+
+.interview__card-name--green {
+  color: #4AC297;
+}
+
+.interview__card-name--green span {
+  color: #4AC297;
+}
+
+.interview__card-subject--green {
+  background-color: #4AC297;
+}
+
+.interview__card-text--green {
+  position: relative;
+}
+
+.interview__card-text--green::before {
+  position: absolute;
+  content: "";
+  top: myrem(30);
+  background: url(../images/card-bg-effect2-sp.png) no-repeat center center / contain;
+
+  @include mq('md') {
+    top: myrem(-40);
+  }
+}
+
+.swiper1-button-prev,
+.swiper2-button-prev {
+  width: myrem(40);
+  height: myrem(40);
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.swiper1-button-prev::before,
+.swiper2-button-prev::before {
+  content: "";
+  position: absolute;
+  width: myrem(12);
+  height: myrem(14);
+  background-color: #0079C3;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.swiper1-button-next,
+.swiper2-button-next {
+  width: myrem(40);
+  height: myrem(40);
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+}
+
+.swiper1-button-next::before,
+.swiper2-button-next::before {
+  content: "";
+  position: absolute;
+  width: myrem(12);
+  height: myrem(14);
+  background-color: #0079C3;
+  clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+
+.swiper1-pagination,
+.swiper2-pagination {
+  font-family: $font-sub1;
+  font-weight: $Regular;
+  font-size: myrem(16);
+  line-height: calc(28 / 16);
+  top: 0;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.swiper-interview-container {
+  position: relative;
+  padding-bottom: myrem(33);
+
+  @include mq('md') {
+    padding-bottom: myrem(55);
+
+  }
+}
+

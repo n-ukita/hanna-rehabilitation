@@ -1,0 +1,49 @@
+@use 'global' as *;
+
+.c-btn2 {
+  display: inline-block;
+  min-width: myrem(300);
+  background-color: #48AEDE;
+  padding-top: myrem(10);
+  padding-bottom: myrem(10);
+  text-align: center;
+  border-radius: myrem(35);
+
+  @include mq('md') {
+    padding-top: myrem(20);
+    padding-bottom: myrem(20);  
+  }
+}
+
+.c-btn2--green {
+  background-color: #4AC297;
+}
+
+.c-btn2 span {
+  display: inline-block;
+  font-size: myrem(16);
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  color: #fff;
+  position: relative;
+
+  @include mq('md') {
+    font-size: myrem(20);
+  }
+}
+
+.c-btn2 span:before {
+  position: absolute;
+  content: "";
+  width: myrem(10);
+  height: myrem(10);
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  right: myrem(-66);
+
+  @include mq('md') {
+    right: myrem(-42);
+  }
+}
