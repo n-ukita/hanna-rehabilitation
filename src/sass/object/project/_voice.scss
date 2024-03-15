@@ -2,7 +2,11 @@
 
 .voice {
   background-color: #fff;
-  padding-bottom: myrem(100);
+  padding-bottom: myrem(80);
+
+  @include mq('md') {
+    padding-bottom: myrem(100);
+  }
 }
 
 .voice__title {
@@ -140,9 +144,11 @@
   width: myrem(240);
   position: relative;
   z-index: 1;
+  left: myrem(60);
 
   @include mq('md') {
     width: myrem(370);
+    left: 50%;
   }
 }
 
@@ -194,7 +200,7 @@
 }
 
 .voice__btn-wrapper {
-  margin-top: myrem(133);
+  margin-top: myrem(70);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,6 +208,7 @@
   @include mq('md') {
     flex-direction: row;
     align-items: initial;
+    margin-top: myrem(133);
   }
 }
 
@@ -209,6 +216,7 @@
   background: linear-gradient(90deg,#5FB8EF 0%,#615EF4 50%,#0079C3 100%);
   display: inline-block;
   max-width: myrem(354);
+  width: 100%;
   border-radius: myrem(10);
   padding-top: myrem(37);
   padding-bottom: myrem(37);
@@ -257,19 +265,38 @@
   }
 }
 
+.voice__document-btn::after {
+  content: "Request";
+  position: absolute;
+  font-family: $font-heading;
+  font-weight: $Regular;
+  font-size: myrem(61);
+  color: rgba($color: #fff, $alpha: 0.3);
+  bottom: myrem(-20);
+  right: myrem(20);
+  transform: rotate(-5deg);
+
+  @include mq('md') {
+    font-size: myrem(100);
+    bottom: myrem(-24);
+  }
+  
+}
+
 .voice__document-btn span::after {
   content: "";
   position: absolute;
   background: url("../images/voice-btn-arrow.svg") no-repeat center center / contain;
   width: myrem(57);
   height: myrem(8);
-  bottom: myrem(-30);
+  bottom: myrem(-20);
   right: 0;
+  z-index: 2;
 
   @include mq('md') {
     width: myrem(93);
     height: myrem(13);
-  
+    bottom: myrem(-30);
   }
 }
 
@@ -321,6 +348,7 @@
   height: myrem(144);
   bottom: 0;
   left: myrem(5);
+  z-index: 1;
 
   @include mq('md') {
     width: myrem(184);
@@ -329,58 +357,129 @@
   }
 }
 
+.voice__open-btn::after {
+  content: "Opencampus";
+  position: absolute;
+  font-family: $font-heading;
+  font-weight: $Regular;
+  font-size: myrem(61);
+  color: rgba($color: #fff, $alpha: 0.3);
+  bottom: myrem(-10);
+  right: 0;
+  transform: rotate(-5deg);
+
+  @include mq('md') {
+    font-size: myrem(100);
+    bottom: myrem(-24);
+  }
+}
+
 .voice__open-btn span::after {
   content: "";
   position: absolute;
   background: url("../images/voice-btn-arrow.svg") no-repeat center center / contain;
-  width: myrem(93);
-  height: myrem(13);
-  bottom: myrem(-10);
+  width: myrem(57);
+  height: myrem(8);
+  bottom: myrem(-5);
   right: myrem(30);
+
+  @include mq('md') {
+    width: myrem(93);
+    height: myrem(13);
+    bottom: myrem(-10);
+  }
 }
 
 .voice__card--mt1 {
-  padding-top: myrem(140);
+  padding-top: myrem(98);
+
+  @include mq('md') {
+  }  padding-top: myrem(140);
 }
 
 .voice__card--mt2 {
-  padding-top: myrem(213);
+  padding-top: myrem(150);
+
+  @include mq('md') {
+    padding-top: myrem(213);
+
+  }
 }
 
 .voice__card--mt3 {
-  padding-top: myrem(200);
+  padding-top: myrem(140);
+
+  @include mq('md') {
+    padding-top: myrem(200);
+
+  }
 }
 
 .voice__card--mt4 {
-  padding-top: myrem(213);
+  padding-top: myrem(150);
+
+  @include mq('md') {
+    padding-top: myrem(213);
+
+  }
 }
 
 .voice__card--mt5 {
-  padding-top: myrem(170);
+  padding-top: myrem(119);
+
+  @include mq('md') {
+    padding-top: myrem(170);
+  }
 }
 
 .voice__card--mt6 {
-  padding-top: myrem(143);
+  padding-top: myrem(100);
+
+  @include mq('md') {
+    padding-top: myrem(143);
+  }
 }
 
 .voice__card--mt7 {
-  padding-top: myrem(170);
+  padding-top: myrem(119);
+
+  @include mq('md') {
+    padding-top: myrem(170);
+  }
 }
 
 .voice__card--mt8 {
-  padding-top: myrem(273);
+  padding-top: myrem(191);
+
+  @include mq('md') {
+    padding-top: myrem(273);
+  }
 }
 
 .voice__card--mt9 {
-  padding-top: myrem(80);
+  padding-top: myrem(56);
+
+  @include mq('md') {
+    padding-top: myrem(80);
+  }
 }
 
 .voice__card--mt10 {
-  padding-top: myrem(243);
+  padding-top: myrem(170);
+
+  @include mq('md') {
+    padding-top: myrem(243);
+
+  }
 }
 
 .voice__card--mt11 {
-  padding-top: myrem(200);
+  padding-top: myrem(140);
+
+  @include mq('md') {
+    padding-top: myrem(200);
+
+  };
 }
 
 .voice__card-btn {

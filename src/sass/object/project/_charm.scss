@@ -1,7 +1,6 @@
 @use 'global' as *;
 
 
-
 .charm__top-wrapper {
   background: url(../images/charm-bg-sp.jpg) no-repeat center 0% / cover;
   position: relative;
@@ -177,18 +176,25 @@
 }
 
 .charm__items-wrapper {
+  position: relative;
+  top: 0;
+
+  @include mq('md') {
+    top: myrem(30);
+  }
   
 }
 
 .charm__items-bg {
   width: 100%;
-  aspect-ratio: 384 / 550;
-  height: 100%;
+  aspect-ratio: 384 / 345;
   background: url(../images/charm-bg2-sp.png) no-repeat center center / cover;
   position: relative;
   z-index: 0;
+  top: myrem(-150);
 
   @include mq('md') {
+    top: 0;
     aspect-ratio: 1440 / 245;
     background: url(../images/charm-bg2.png) no-repeat center center / cover;
   }
@@ -196,20 +202,23 @@
 
 
 .charm__items {
-  position: absolute;
-  top: -22%;
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  top: myrem(60);
+  width: 100%;
 
   @include mq('sm') {
-    top: -5%;
-
+  width: initial;
   }
 
 
   @include mq('md') {
     display: flex;
     top: myrem(-120);
+    width: initial;
+  
+
   }
 }
 
@@ -227,6 +236,11 @@
 }
 
 .charm__item-wrapper:first-child {
+  left: myrem(75);
+
+  @include mq('md') {
+    left: initial;
+  }
 
   .charm__text-box {
     bottom: myrem(95);
@@ -240,17 +254,25 @@
 
 .charm__item-wrapper:nth-child(2) {
   margin-top: myrem(80);
+  left: myrem(30);
+  top: myrem(25) ;
   
   @include mq('md') {
     margin-top: myrem(50);
+    left: initial;
+    top: initial;
   }
 }
 
 .charm__item-wrapper:nth-child(3) {
-  margin-top: myrem(-50);
+  left: 0;
+
 
   @include mq('md') {
     margin-top: 0;
+    left: initial;
+    top: initial;
+
   }
 
   .charm__text-box {
@@ -264,10 +286,14 @@
 }
 
 .charm__item-wrapper:nth-child(4) {
-  margin-top: myrem(30);
+  margin-top: myrem(78);
+  top: myrem(25);
+  left: myrem(-45);
 
   @include mq('md') {
     margin-top: myrem(50);
+    top: initial;
+    left: initial;
   }
 
   .charm__text-box {
@@ -276,14 +302,16 @@
 }
 
 .charm__item-wrapper:nth-child(5) {
-  margin-top: myrem(-50);
+  left: myrem(-75);
+
 
   @include mq('md') {
     margin-top: 0;
+    left: initial;
   }
 
   .charm__text-box {
-    bottom: myrem(15);
+    bottom: myrem(95);
 
     @include mq('md') {
       bottom: myrem(70);
@@ -297,8 +325,8 @@
   position: absolute;
   bottom: myrem(-10);
   left: myrem(10);
-  width: myrem(32);
-  height: myrem(23);
+  width: myrem(18);
+  height: myrem(13);
   background: url(../images/point-effect.png) no-repeat center center / contain;
   z-index: 2;
 
@@ -315,8 +343,8 @@
   position: absolute;
   bottom: myrem(65);
   left: myrem(10);
-  width: myrem(32);
-  height: myrem(23);
+  width: myrem(18);
+  height: myrem(13);
   background: url(../images/point-effect.png) no-repeat center center / contain;
   z-index: 2;
 
@@ -333,8 +361,8 @@
   position: absolute;
   bottom: myrem(70);
   left: myrem(10);
-  width: myrem(32);
-  height: myrem(23);
+  width: myrem(18);
+  height: myrem(13);
   background: url(../images/point-effect.png) no-repeat center center / contain;
   z-index: 2;
 
@@ -349,10 +377,10 @@
 .charm__item-wrapper:nth-child(5)::before {
   content: "";
   position: absolute;
-  bottom: myrem(-15);
+  bottom: myrem(70);
   left: myrem(10);
-  width: myrem(32);
-  height: myrem(23);
+  width: myrem(18);
+  height: myrem(13);
   background: url(../images/point-effect.png) no-repeat center center / contain;
   z-index: 2;
 
@@ -367,8 +395,8 @@
 
 
 .charm__item {
-  width: myrem(172);
-  height: myrem(172);
+  width: myrem(99);
+  height: myrem(106);
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -408,7 +436,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-family: $font-heading;
-  font-size: myrem(23);
+  font-size: myrem(13);
 
   @include mq('md') {
     font-size: myrem(30);
@@ -416,7 +444,7 @@
 }
 
 .charm__item-title span {
-  font-size: myrem(30);
+  font-size: myrem(17);
   position: relative;
 
   @include mq('md') {
@@ -428,10 +456,10 @@
   content: "";
   position: absolute;
   top: myrem(5);
-  left: myrem(-48);
+  left: myrem(-30);
   background: url(../images/point-line-sp.png)no-repeat center center / contain;
-  width: myrem(81);
-  height: myrem(31);
+  width: myrem(46);
+  height: myrem(18);
   z-index: -1;
 
   @include mq('md') {
@@ -447,16 +475,23 @@
 .charm__text-box {
   position: absolute;
   bottom: myrem(18);
-  left: myrem(10);
+  left: myrem(5);
+  line-height: 0;
+
+  @include mq('md') {
+    line-height: initial;
+    left: myrem(10);
+  }
 }
 
 .charm__text1 {
   display: inline-block;
   background-color: #fff;
   padding: 0 myrem(5);
-  font-size: myrem(17);
+  font-size: myrem(10);
   font-weight: $Medium;
-  line-height: calc(25 / 17);
+  line-height: calc(15 / 10);
+  white-space: nowrap;
 
   @include mq('md') {
     font-size: myrem(22);
@@ -469,15 +504,18 @@
   display: inline-block;
   background-color: #fff;
   padding: 0 myrem(5);
-  margin-top: myrem(5);
-  font-size: myrem(17);
+  margin-top: myrem(3);
+  font-size: myrem(10);
   font-weight: $Medium;
-  line-height: calc(25 / 17);
+  line-height: calc(15 / 10);
+  white-space: nowrap;
+
 
   @include mq('md') {
     font-size: myrem(22);
     line-height: calc(34 / 22);
     padding: 0 myrem(10);
+    margin-top: myrem(5);
   }
 }
 

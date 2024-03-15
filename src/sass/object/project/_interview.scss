@@ -7,6 +7,7 @@
 
   @include mq('md') {
     padding-top: myrem(80);
+    padding-bottom: myrem(141);
   }
 }
 
@@ -162,8 +163,8 @@
 }
 
 .interview__card {
-  padding: myrem(35) myrem(15) 0;
-  border:myrem(2) solid  #5FB8EF;
+  padding: 0 myrem(15) 0;
+  border:myrem(3) solid  #5FB8EF;
   border-radius: myrem(20);
   background-color: rgba($color: #FCFCF2, $alpha: 0.7);
   position: relative;
@@ -324,7 +325,7 @@
 
 .interview__card-name {
   text-align: center;
-  font-size: myrem(30);
+  font-size: myrem(26);
   font-family: $font-sub1;
   font-weight: $Medium;
   color: #48AEDE;  
@@ -336,7 +337,7 @@
 }
 
 .interview__card-name span {
-  font-size: myrem(20);
+  font-size: myrem(18);
   font-family: $font-sub1;
   font-weight: $Medium;
   color: #48AEDE; 
@@ -353,22 +354,8 @@
   align-items: center;
 
   @include mq('md') {
-    margin-top: initial;
+    margin-top: myrem(23);
     flex-direction: row;
-  }
-}
-
-.interview__card-subject {
-  font-family: $font-sub1;
-  font-weight: $Medium;
-  font-size: myrem(14);
-  color: #fff;
-  background-color: #48AEDE;
-  padding: myrem(5) myrem(23) myrem(4);
-
-  @include mq('md') {
-    font-size: myrem(18);
-    padding: myrem(7) myrem(16) myrem(6);
   }
 }
 
@@ -381,7 +368,6 @@
 
   @include mq('md') {
     margin-top: initial;
-    margin-left: myrem(15);
   }
 }
 
@@ -427,7 +413,7 @@
 
 .interview__card-btn {
   position: absolute;
-  bottom: 0;
+  bottom: myrem(30);
   left: 50%;
   transform: translateX(-50%);
   margin-top: myrem(34);
@@ -437,10 +423,11 @@
   margin-inline: auto;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 
   @include mq('md') {
     margin-top: myrem(88);
-    bottom: 0;
+    bottom: myrem(60);
   }
 }
 
@@ -598,7 +585,8 @@
 }
 
 .swiper1-button-prev,
-.swiper2-button-prev {
+.swiper2-button-prev,
+.swiper3-button-prev {
   width: myrem(40);
   height: myrem(40);
   border-radius: 50%;
@@ -613,7 +601,8 @@
 }
 
 .swiper1-button-prev::before,
-.swiper2-button-prev::before {
+.swiper2-button-prev::before,
+.swiper3-button-prev::before {
   content: "";
   position: absolute;
   width: myrem(12);
@@ -623,7 +612,8 @@
 }
 
 .swiper1-button-next,
-.swiper2-button-next {
+.swiper2-button-next,
+.swiper3-button-next {
   width: myrem(40);
   height: myrem(40);
   border-radius: 50%;
@@ -639,7 +629,8 @@
 }
 
 .swiper1-button-next::before,
-.swiper2-button-next::before {
+.swiper2-button-next::before,
+.swiper3-button-next::before {
   content: "";
   position: absolute;
   width: myrem(12);
@@ -649,7 +640,8 @@
 }
 
 .swiper1-pagination,
-.swiper2-pagination {
+.swiper2-pagination,
+.swiper3-pagination {
   font-family: $font-sub1;
   font-weight: $Regular;
   font-size: myrem(16);

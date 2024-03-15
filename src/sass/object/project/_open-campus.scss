@@ -1,0 +1,320 @@
+@use 'global' as *;
+
+.open-campus {
+  position: relative;
+
+}
+
+.open-campus::before {
+  content: "";
+  position: absolute;
+  background: url("../images/open-campus-bg.jpg") no-repeat center center / cover;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+
+.open-campus__title-box {
+  text-align: center;
+  padding-bottom: myrem(49);
+}
+
+.open-campus_lead {
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  font-size: myrem(40);
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  background-color: #1B98DD;
+  padding: myrem(7) myrem(45) myrem(4);
+  border-radius: myrem(35) ;
+  }
+
+.open-campus__title {
+  margin-inline: auto;
+  max-width: myrem(839);
+  width: 100%;
+}
+
+.open-campus__title img {
+  aspect-ratio: 839 / 178;
+  object-fit: contain;
+  width: 100%;
+}
+
+
+.open-campus__point {
+  position: relative;
+}
+
+.open-campus__point::before {
+  content: "";
+  position: absolute;
+  background: url(../images/open-campus-bg2.png)  no-repeat center center / cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.open-campus__wrapper {
+}
+
+
+.open-campus__point-wrapper {
+  padding-top: myrem(67);
+  display: flex;
+  position: relative;
+  z-index: 1;
+  align-items: end;
+  justify-content: center;
+
+}
+
+.open-campus__point-img-box {
+  flex: 0 0 myrem(348);
+
+}
+
+.open-campus__point-title {
+  font-family: $font-sub1;
+  font-weight: $Bold;
+  font-size: myrem(36);
+  position: relative;
+  transform: rotate(-8deg);
+  top: myrem(-55);
+}
+
+.open-campus__point-title::before {
+  content: "";
+  position: absolute;
+  background: url(../images/open-campus-speech.png) no-repeat center center / contain;
+  top: myrem(-52);
+  left: myrem(-55);
+  transform: rotate(8deg);
+  width: myrem(400);
+  height: myrem(170);
+  z-index: -1;
+}
+
+.open-campus__point-img {
+  
+}
+
+.open-campus__point-img img {
+  aspect-ratio: 348 / 397;
+  object-fit: cover;
+  width: 100%;
+}
+
+.open-campus__point-items {
+  margin-left: myrem(51);
+  flex: 0 0 myrem(560);
+}
+
+.open-campus__point-item {
+  border: 3px solid #4AC297;
+  padding-top: myrem(20);
+  padding-bottom: myrem(19);
+  padding-left: myrem(40);
+  border-radius: myrem(20);
+  box-shadow: 0 0 myrem(8) myrem(4) rgba($color:#000, $alpha: 0.1);
+}
+
+.open-campus__point-item + .open-campus__point-item {
+  margin-top: myrem(20);
+}
+
+.open-campus__point-item span {
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  font-size: myrem(30);
+  padding-left: myrem(64);
+  position: relative;
+}
+
+.open-campus__point-item span::before {
+  content: "";
+  position: absolute;
+  background: url(../images/open-campus_point-icon.png) no-repeat center center / contain;
+  width: myrem(40);
+  height: myrem(35);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.open-campus__program {
+  font-family: $font-sub1;
+  font-weight: $Bold;
+  font-size: myrem(50);
+  text-align: center;
+  margin-top: myrem(47);
+  position: relative;
+  z-index: 5;
+  padding-bottom: myrem(46);
+}
+
+.open-campus__program::before {
+  content: "";
+  position: absolute;
+  background: url(../images/open-campus_bar.svg)  no-repeat center center / cover;
+  width: 100%;
+  height: myrem(34);
+  bottom: 0;
+  left: 0;
+}
+
+.open-campus__program-cards {
+  margin-top: myrem(36);
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: myrem(45) myrem(30);
+  position: relative;
+  padding-bottom: myrem(240);
+}
+
+.open-campus__program-cards::before {
+  content: "and more!";
+  position: absolute;
+  font-family: $font-heading;
+  font-size: myrem(150);
+  font-weight: $Regular;
+  color: #4AC297;
+  bottom: 0;
+  right: 0;
+  transform: rotate(-5deg);
+
+}
+
+.open-campus__program-card {
+  border-radius: myrem(10);
+  overflow: hidden;
+}
+
+.open-campus__program-img {
+  border-radius: myrem(10);
+  overflow: hidden;
+}
+
+.open-campus__program-img img {
+  aspect-ratio: 380 / 253;
+  object-fit: cover;
+  width: 100%;
+}
+
+.open-campus__program-card-title {
+  font-family: $font-sub1;
+  font-weight: $Bold;
+  font-size: myrem(30);
+  position: relative;
+  padding-left: myrem(22);
+  margin-top: myrem(17);
+}
+
+.open-campus__program-card-title::before {
+  content: "";
+  position: absolute;
+  width: myrem(20);
+  height: myrem(20);
+  background-color: #7BCCFE;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border-radius: 50%;
+}
+
+.open-campus__event-title {
+  text-align: center;
+  margin-top: myrem(42);
+}
+
+.open-campus__event-title span {
+  font-family: $font-sub1;
+  font-weight: $Medium;
+  font-size: myrem(40);
+  color: #231815;
+  display: inline-block;
+  padding-left: myrem(57);
+  padding-right: myrem(57);
+  position: relative;
+}
+
+.open-campus__event-title span::before {
+  content: "";
+  position: absolute;
+  background: url(../images/open-campus_event-effect.svg) no-repeat center center / contain;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: myrem(30);
+  height: myrem(30);
+}
+
+.open-campus__event-title span::after {
+  content: "";
+  position: absolute;
+  background: url(../images/open-campus_event-effect.svg) no-repeat center center / contain;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: myrem(30);
+  height: myrem(30);
+}
+
+
+.open-campus__event-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include mq('md') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: myrem(35) myrem(40);
+  }
+}
+
+.open-campus__event-card {
+  position: relative;
+  border-radius: myrem(50);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.open-campus__event-img {
+  overflow: hidden;
+  border-radius: myrem(50);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.open-campus__event-img img {
+  aspect-ratio: 580 / 315;
+  object-fit: cover;
+  width: 100%;
+}
+
+.open-campus__event-card-lead {
+}
+
+.open-campus__event-card-day {
+}
+
+.open-campus__event-card-time {
+}
+
+.open-campus__event-btn {
+}
+
+.open-campus__slide-wrapper {
+}
+
+.open-campus__slide-cards {
+}
+
+.open-campus__slide-img {
+}
+

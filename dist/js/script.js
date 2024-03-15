@@ -97,6 +97,7 @@ let mySwiper4 = new Swiper ('.swiper4', {
   // 以下にオプションを設定
 	loop: true, //最後に達したら先頭に戻る
   slidesPerView: 'auto',
+  
   breakpoints: {
     600: {
       spaceBetween: 120,
